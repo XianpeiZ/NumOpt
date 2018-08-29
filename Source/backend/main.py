@@ -961,9 +961,9 @@ if __name__ == "__main__":
     # optimize('../case/iRRAM/analytic/analytic.pth')
     optimize('../../Binary/IR/iRRAM/e_example/e_example.ir')
     optimize('../../Binary/IR/iRRAM/float_extension/float_extension.ir')
+    optimize('../../Binary/IR/iRRAM/harmonic/harmonic.ir')
+    optimize('../../Binary/IR/iRRAM/gamma/gamma.ir')
     optimize('../../Binary/IR/iRRAM/jmmuller/jmmuller.ir')
-    # optimize('../case/iRRAM/harmonic/harmonic.pth')
-    # optimize('../case/iRRAM/gamma/gamma.pth')
 
 
 
