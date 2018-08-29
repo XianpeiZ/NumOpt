@@ -535,6 +535,7 @@ def analysis(case, mode='all'):
     print(analysis_command)
     os.system(analysis_command)
     print("")
+    os.chdir('../../../Source/backend')
 
 
 if __name__ == "__main__":
@@ -550,7 +551,7 @@ if __name__ == "__main__":
     # for case in cases:
     #     run(case)
     #     analysis(case)
-    case = 'float_extension'
+    cases = ['float_extension', 'e_example', 'jmmuller']
     # case = 'float_extension2'
     # case = 'harmonic'
     # case = 'gamma'
@@ -559,7 +560,8 @@ if __name__ == "__main__":
     #case = 'e_example'
     #case = 'e_example'
     # case = 'itsys'
-    prepare(case)
-    run(case, mode='rd')
-    analysis(case, mode='rd')
+    for case in cases:
+    	prepare(case)
+    	run(case, mode='rd')
+    	analysis(case, mode='rd')
 
