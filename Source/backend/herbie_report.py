@@ -568,6 +568,7 @@ def analysis(case, mode='all'):
     print(analysis_command)
     os.system(analysis_command)
     print("")
+    os.chdir('../../../Source/backend')
 
 
 if __name__ == "__main__":
@@ -578,6 +579,7 @@ if __name__ == "__main__":
 
     pattern = re.compile(r'irram_(.*)\(')
     cases = pattern.findall(content)
+    # cases = ['quad2m', 'cos2']
     print(cases)
 
     for case in cases:
