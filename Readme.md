@@ -1,0 +1,9 @@
+运行前检查config.py、Source/backend/makefile以及herbie_report.py与irram_report.py中save_makefile函数中iRRAM_HOME是否正确
+在Script文件夹中，运行sh testcases.sh
+
+#各文件夹存放内容说明
+在Binary文件夹中会生成HerbieOptimized文件夹，iRRAMOptimized文件夹，obj文件夹，OptimizedCode文件夹。
+其中HerbieOptimized、iRRAMOptimized文件夹分别存放herbie和iRRAM case生成的irram.cc, herbie.cc, double.cc等文件。
+Binary/obj文件夹存放上述cc文件编译后的可执行文件和输入点文件。
+Binary/OptimizedCode文件夹存放优化后的文件.
+Result文件夹存放优化前后精度的对比情况

@@ -1,0 +1,15 @@
+__pycache__/
+Binary/HerbieOptimized/
+Binary/iRRAMOptimized/
+Binary/obj/
+Binary/OptimizedCode/
+Result/
+Source/backend/analysis
+Source/backend/analysis_irram
+Source/backend/bits_error
+Source/backend/float
+Source/backend/float.cpp
+Source/backend/real
+Source/backend/real.cpp
+
+
