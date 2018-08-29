@@ -571,10 +571,7 @@ def analysis(case, mode='all'):
 
 
 if __name__ == "__main__":
-    prepare('sintan')
-    run('sintan', mode='rd')
-    analysis('sintan', mode='rd')
-'''
+  
     irram_code_file = "../../Subject/herbie/herbieopt/irram.cc"
     with open(irram_code_file, "r") as f:
          content = f.read()
@@ -588,7 +585,10 @@ if __name__ == "__main__":
         run(case, mode="rd")
         analysis(case, mode="rd")
 '''
-
+prepare('sintan')
+    run('sintan', mode='rd')
+    analysis('sintan', mode='rd')
+'''
 
 
 

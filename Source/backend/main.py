@@ -919,38 +919,38 @@ def optimize_for_multi_input(path_file, points_file):
 if __name__ == "__main__":
 
     # Herbie case
-    #optimize('../../Binary/IR/herbie/sqrtexp/sqrtexp.ir')
-    #optimize('../../Binary/IR/herbie/sintan/sintan.ir')
+    optimize('../../Binary/IR/herbie/sqrtexp/sqrtexp.ir')
+    optimize('../../Binary/IR/herbie/sintan/sintan.ir')
     optimize('../../Binary/IR/herbie/cos2/cos2.ir')
     optimize2('../../Binary/IR/herbie/2nthrt/2nthrt.ir')
     optimize('../../Binary/IR/herbie/2log/2log.ir')
     optimize('../../Binary/IR/herbie/2frac/2frac.ir')
     optimize('../../Binary/IR/herbie/2cos/2cos.ir')
-    #optimize('../../Binary/IR/herbie/2cbrt/2cbrt.ir')
-    #optimize('../../Binary/IR/herbie/tanhf/tanhf.ir')
-    #optimize('../../Binary/IR/herbie/qlog/qlog.ir')
-    #optimize('../../Binary/IR/herbie/logs/logs.ir')
-    #optimize('../../Binary/IR/herbie/logq/logq.ir')
-    #optimize('../../Binary/IR/herbie/invcot/invcot.ir')
-    #optimize('../../Binary/IR/herbie/expq3/expq3.ir')
-    #optimize('../../Binary/IR/herbie/expq2/expq2.ir')
-    #optimize('../../Binary/IR/herbie/expm1/expm1.ir')
-    #optimize2('../../Binary/IR/herbie/expax/expax.ir')
-    #optimize('../../Binary/IR/herbie/exp2/exp2.ir')
-    #optimize('../../Binary/IR/herbie/3frac/3frac.ir')
-    #optimize('../../Binary/IR/herbie/2tan/2tan.ir')
-    #optimize('../../Binary/IR/herbie/2sin/2sin.ir')
+    optimize('../../Binary/IR/herbie/2cbrt/2cbrt.ir')
+    optimize('../../Binary/IR/herbie/tanhf/tanhf.ir')
+    optimize('../../Binary/IR/herbie/qlog/qlog.ir')
+    optimize('../../Binary/IR/herbie/logs/logs.ir')
+    optimize('../../Binary/IR/herbie/logq/logq.ir')
+    optimize('../../Binary/IR/herbie/invcot/invcot.ir')
+    optimize('../../Binary/IR/herbie/expq3/expq3.ir')
+    optimize('../../Binary/IR/herbie/expq2/expq2.ir')
+    optimize('../../Binary/IR/herbie/expm1/expm1.ir')
+    optimize2('../../Binary/IR/herbie/expax/expax.ir')
+    optimize('../../Binary/IR/herbie/exp2/exp2.ir')
+    optimize('../../Binary/IR/herbie/3frac/3frac.ir')
+    optimize('../../Binary/IR/herbie/2tan/2tan.ir')
+    optimize('../../Binary/IR/herbie/2sin/2sin.ir')
     optimize('../../Binary/IR/herbie/2atan/2atan.ir')
 
     # NumeratorFrom2
     optimize2('../../Binary/IR/herbie/quadp/quadp.ir')
-    #optimize2('../../Binary/IR/herbie/quadm/quadm.ir')
-    #optimize2('../../Binary/IR/herbie/quad2p/quad2p.ir')
-    #optimize2('../../Binary/IR/herbiequad2m/quad2m.ir')#real_res
+    optimize2('../../Binary/IR/herbie/quadm/quadm.ir')
+    optimize2('../../Binary/IR/herbie/quad2p/quad2p.ir')
+    optimize2('../../Binary/IR/herbie/quad2m/quad2m.ir')
 
     # NumeratorFrom3
     optimize('../../Binary/IR/herbie/2sqrt/2sqrt.ir')
-    #optimize('../../Binary/IR/herbie/2isqrt/2isqrt.ir')
+    optimize('../../Binary/IR/herbie/2isqrt/2isqrt.ir')
 
     # midarc
     # optimize('../case/herbie/midarc/midarc.pth')
@@ -961,7 +961,7 @@ if __name__ == "__main__":
     # optimize('../case/iRRAM/analytic/analytic.pth')
     optimize('../../Binary/IR/iRRAM/e_example/e_example.ir')
     optimize('../../Binary/IR/iRRAM/float_extension/float_extension.ir')
-    optimize('../../Binary/IR/iRRAM/jmmuller/jmmuller.pth')
+    optimize('../../Binary/IR/iRRAM/jmmuller/jmmuller.ir')
     # optimize('../case/iRRAM/harmonic/harmonic.pth')
     # optimize('../case/iRRAM/gamma/gamma.pth')
 
