@@ -29,7 +29,7 @@ void compute() {
         printf("Get time error!\n");
         return;
     }
-	iRRAM::REAL r_irram = evaluate(x_irram);
+	iRRAM::REAL r_irram = evaluate(x_double);
     if(gettimeofday(&tfinish,NULL)!=0){
         printf("Get time error!\n");
         return;
