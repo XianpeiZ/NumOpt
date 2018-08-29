@@ -551,7 +551,7 @@ if __name__ == "__main__":
     # for case in cases:
     #     run(case)
     #     analysis(case)
-    cases = ['float_extension', 'e_example', 'jmmuller']
+    cases = ['e_example', 'float_extension', 'gamma', 'harmonic','jmmuller']
     # case = 'float_extension2'
     # case = 'harmonic'
     # case = 'gamma'
