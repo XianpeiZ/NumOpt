@@ -67,7 +67,7 @@
                     }
                 }
             ],
-            "constrain": "true"
+            "constrain": "x<1e19&&x>-1e19"
         }
     ],
     "input_variables": [
