@@ -919,10 +919,9 @@ def optimize_for_multi_input(path_file, points_file):
 if __name__ == "__main__":
 
     # Herbie case
+    #optimize('../../Binary/IR/herbie/sintan/sintan.ir')
     optimize('../../Binary/IR/herbie/sqrtexp/sqrtexp.ir')
-    optimize('../../Binary/IR/herbie/sintan/sintan.ir')
     optimize('../../Binary/IR/herbie/cos2/cos2.ir')
-    optimize2('../../Binary/IR/herbie/2nthrt/2nthrt.ir')
     optimize('../../Binary/IR/herbie/2log/2log.ir')
     optimize('../../Binary/IR/herbie/2frac/2frac.ir')
     optimize('../../Binary/IR/herbie/2cos/2cos.ir')
@@ -941,6 +940,7 @@ if __name__ == "__main__":
     optimize('../../Binary/IR/herbie/2tan/2tan.ir')
     optimize('../../Binary/IR/herbie/2sin/2sin.ir')
     optimize('../../Binary/IR/herbie/2atan/2atan.ir')
+    optimize2('../../Binary/IR/herbie/2nthrt/2nthrt.ir')
 
     # NumeratorFrom2
     optimize2('../../Binary/IR/herbie/quadp/quadp.ir')
@@ -958,12 +958,12 @@ if __name__ == "__main__":
     # optimize_for_multi_input('../case/iRRAM/midarc/midarc_real.pth', '../case/iRRAM/midarc/midarc_points.txt')
     # optimize_for_multi_input('../case/herbie/midarc/midarc_real.pth', '../case/herbie/midarc/midarc_points.txt')
     # iRRMA case
-    # optimize('../case/iRRAM/analytic/analytic.pth')
     optimize('../../Binary/IR/iRRAM/e_example/e_example.ir')
     optimize('../../Binary/IR/iRRAM/float_extension/float_extension.ir')
     optimize('../../Binary/IR/iRRAM/harmonic/harmonic.ir')
     optimize('../../Binary/IR/iRRAM/gamma/gamma.ir')
     optimize('../../Binary/IR/iRRAM/jmmuller/jmmuller.ir')
+    optimize('../../Binary/IR/iRRAM/analytic/analytic.ir')
 
 
 
