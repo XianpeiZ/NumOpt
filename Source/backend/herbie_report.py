@@ -578,8 +578,8 @@ if __name__ == "__main__":
          content = f.read()
 
     pattern = re.compile(r'irram_(.*)\(')
-    cases = pattern.findall(content)
-    # cases = ['quad2m', 'cos2']
+    # cases = pattern.findall(content)
+    cases = ['2nthrt']
     print(cases)
 
     for case in cases:
