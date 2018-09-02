@@ -358,16 +358,26 @@ def prepare(casename):
 
     # 生成opt代码，其实现从当前目录的opt.cc中获取
     # generate_opt_cc(casename)
+
     os.system("cp ../../Binary/OptimizedCode/iRRAM/"+casename+"/opt.cc ../../Binary/iRRAMOptimized/iRRAM/"+casename+"/opt.cc")
+
     os.chdir("../../Binary/iRRAMOptimized/iRRAM/"+casename)#进入Binary/iRRAMOptimized/iRRAM/casename
     with open('opt.cc','r') as f:
         opt = f.read()
         func = opt[:opt.find('void')]
-        
+        if(casename == 'analytic'):
+            func = re.sub('int degree_real;', 'int degree_real = 15;', func)
+            func = re.sub('int degree;', 'int degree = 15;', func)
+
     with open('irram.cc','r') as f1:
         irram = f1.read()
         compute = irram[irram.find('void'):]
         compute = re.sub('(?<==).*?'+casename, 'evaluate', compute)
+        if casename == 'analytic':
+            compute = re.sub('REAL x_double', 'double x_double', compute)
+            #compute = re.sub('iRRAM::REAL r_irram', 'double r_double', compute)
+            #compute = re.sub('double.*as_double\(\);', '//', compute)
+
     with open('opt.cc','w') as f2:
         f2.write('#include <sys/time.h>')
         f2.write(func)
@@ -455,10 +465,9 @@ def run(casename, mode='all'):
         os.system("./" + irram_bin + " < point.txt > " + "../../../../Result/iRRAM/"+casename+"/tmp_result.txt")
         tmp_file = open("../../../../Result/iRRAM/"+casename+"/tmp_result.txt", 'r')
         tmp_str = tmp_file.read()
-        #print('tem_str: '+tmp_str)
+        # print('tem_str: '+tmp_str)
         irram_time += float(tmp_str.split('\n')[0])
         os.system('echo \"' + tmp_str.split('\n')[1] + '\" >> ../../../../Result/iRRAM/'+casename +'/'+ irram_bin + "_result.txt." + mode)
-
 
     for point in points:
         print(point, file=open("point.txt", "w"))
@@ -551,7 +560,7 @@ if __name__ == "__main__":
     # for case in cases:
     #     run(case)
     #     analysis(case)
-    cases = ['e_example', 'float_extension', 'gamma', 'harmonic','jmmuller']
+    cases = ['analytic', 'e_example', 'float_extension', 'gamma', 'harmonic', 'jmmuller']
     # case = 'float_extension2'
     # case = 'harmonic'
     # case = 'gamma'
@@ -559,9 +568,10 @@ if __name__ == "__main__":
     # case = 'lambov'
     #case = 'e_example'
     #case = 'e_example'
-    # case = 'itsys'
+    #case = 'itsys'
+    #case = 'analytic'
     for case in cases:
-    	prepare(case)
-    	run(case, mode='rd')
-    	analysis(case, mode='rd')
+        prepare(case)
+        run(case, mode='rd')
+        analysis(case, mode='rd')
 
