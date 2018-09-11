@@ -17,9 +17,6 @@ import sympy
 import math
 import logging
 import path
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
 
 logging.basicConfig(format='%(levelname)s %(asctime)s : %(message)s', level=logging.INFO)
 
