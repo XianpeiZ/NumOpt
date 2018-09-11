@@ -919,7 +919,7 @@ def optimize_for_multi_input(path_file, points_file):
 if __name__ == "__main__":
 
     # Herbie case
-    #optimize('../../Binary/IR/herbie/sintan/sintan.ir')
+    optimize('../../Binary/IR/herbie/sintan/sintan.ir')
     optimize('../../Binary/IR/herbie/sqrtexp/sqrtexp.ir')
     optimize('../../Binary/IR/herbie/cos2/cos2.ir')
     optimize('../../Binary/IR/herbie/2log/2log.ir')
@@ -958,12 +958,13 @@ if __name__ == "__main__":
     # optimize_for_multi_input('../case/iRRAM/midarc/midarc_real.pth', '../case/iRRAM/midarc/midarc_points.txt')
     # optimize_for_multi_input('../case/herbie/midarc/midarc_real.pth', '../case/herbie/midarc/midarc_points.txt')
     # iRRMA case
+    optimize('../../Binary/IR/iRRAM/analytic/analytic.ir')
     optimize('../../Binary/IR/iRRAM/e_example/e_example.ir')
     optimize('../../Binary/IR/iRRAM/float_extension/float_extension.ir')
-    optimize('../../Binary/IR/iRRAM/harmonic/harmonic.ir')
     optimize('../../Binary/IR/iRRAM/gamma/gamma.ir')
+    optimize('../../Binary/IR/iRRAM/harmonic/harmonic.ir')
     optimize('../../Binary/IR/iRRAM/jmmuller/jmmuller.ir')
-    optimize('../../Binary/IR/iRRAM/analytic/analytic.ir')
+
 
 
 
