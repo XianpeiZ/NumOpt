@@ -573,19 +573,17 @@ def analysis(case, mode='all'):
 
 if __name__ == "__main__":
   
-    irram_code_file = "../../Subject/herbie/herbieopt/irram.cc"
-    with open(irram_code_file, "r") as f:
-         content = f.read()
 
-    pattern = re.compile(r'irram_(.*)\(')
-    # cases = pattern.findall(content)
-    cases = ['2nthrt']
+    cases = ['sintan', 'sqrtexp', 'cos2', '2log', '2frac', '2cos', '2cbrt', 'tanhf', 'qlog', 'logs', 'logq', \
+             'invcot', 'expq3', 'expq2', 'expm1', 'expax', 'exp2', '3frac', '2tan', '2sin', '2atan', '2nthrt', \
+             'quadp', 'quadm', 'quad2p', 'quad2m', '2sqrt', '2isqrt']
     print(cases)
 
     for case in cases:
         prepare(case)
         run(case, mode="rd")
         analysis(case, mode="rd")
+
 '''
 prepare('sintan')
     run('sintan', mode='rd')
