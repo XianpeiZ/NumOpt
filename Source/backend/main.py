@@ -919,6 +919,22 @@ def optimize_for_multi_input(path_file, points_file):
 if __name__ == "__main__":
 
     # Herbie case
+    cases = ['sintan', 'sqrtexp', 'cos2', '2log', '2frac', '2cos', '2cbrt', 'tanhf', 'qlog', 'logs', 'logq', \
+             'invcot', 'expq3', 'expq2', 'expm1', 'exp2', '3frac', '2tan', '2sin', '2atan', \
+             '2sqrt', '2isqrt']
+    for case in cases:
+        try:
+            optimize('../../Binary/IR/herbie/sintan/'+case+'.ir')
+        except:
+            pass
+
+    cases2 = ['2nthrt', 'expax', 'quadp', 'quadm', 'quad2p', 'quad2m']
+    for case in cases2:
+        try:
+            optimize2('../../Binary/IR/herbie/sintan/'+case+'.ir')
+        except:
+            pass
+    '''
     optimize('../../Binary/IR/herbie/sintan/sintan.ir')
     optimize('../../Binary/IR/herbie/sqrtexp/sqrtexp.ir')
     optimize('../../Binary/IR/herbie/cos2/cos2.ir')
@@ -934,13 +950,14 @@ if __name__ == "__main__":
     optimize('../../Binary/IR/herbie/expq3/expq3.ir')
     optimize('../../Binary/IR/herbie/expq2/expq2.ir')
     optimize('../../Binary/IR/herbie/expm1/expm1.ir')
-    optimize2('../../Binary/IR/herbie/expax/expax.ir')
     optimize('../../Binary/IR/herbie/exp2/exp2.ir')
     optimize('../../Binary/IR/herbie/3frac/3frac.ir')
     optimize('../../Binary/IR/herbie/2tan/2tan.ir')
     optimize('../../Binary/IR/herbie/2sin/2sin.ir')
     optimize('../../Binary/IR/herbie/2atan/2atan.ir')
     optimize2('../../Binary/IR/herbie/2nthrt/2nthrt.ir')
+    
+    optimize2('../../Binary/IR/herbie/expax/expax.ir')
 
     # NumeratorFrom2
     optimize2('../../Binary/IR/herbie/quadp/quadp.ir')
@@ -958,12 +975,14 @@ if __name__ == "__main__":
     # optimize_for_multi_input('../case/iRRAM/midarc/midarc_real.pth', '../case/iRRAM/midarc/midarc_points.txt')
     # optimize_for_multi_input('../case/herbie/midarc/midarc_real.pth', '../case/herbie/midarc/midarc_points.txt')
     # iRRMA case
+    '''
     optimize('../../Binary/IR/iRRAM/analytic/analytic.ir')
     optimize('../../Binary/IR/iRRAM/e_example/e_example.ir')
     optimize('../../Binary/IR/iRRAM/float_extension/float_extension.ir')
     optimize('../../Binary/IR/iRRAM/gamma/gamma.ir')
     optimize('../../Binary/IR/iRRAM/harmonic/harmonic.ir')
     optimize('../../Binary/IR/iRRAM/jmmuller/jmmuller.ir')
+
 
 
 
