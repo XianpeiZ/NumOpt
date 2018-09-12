@@ -580,9 +580,12 @@ if __name__ == "__main__":
     print(cases)
 
     for case in cases:
-        prepare(case)
-        run(case, mode="rd")
-        analysis(case, mode="rd")
+        try:
+            prepare(case)
+            run(case, mode="rd")
+            analysis(case, mode="rd")
+        except:
+            pass
 
 '''
 prepare('sintan')
