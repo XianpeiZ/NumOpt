@@ -919,11 +919,13 @@ def optimize_for_multi_input(path_file, points_file):
 if __name__ == "__main__":
 
     # Herbie case
+    '''
     cases = ['sintan', 'sqrtexp', 'cos2', '2log', '2frac', '2cos', '2cbrt', 'tanhf', 'qlog', 'logs', 'logq', \
              'invcot', 'expq3', 'expq2', 'expm1', 'exp2', '3frac', '2tan', '2sin', '2atan', \
              '2sqrt', '2isqrt']
     for case in cases:
         try:
+            print(case)
             optimize('../../Binary/IR/herbie/sintan/'+case+'.ir')
         except:
             pass
@@ -931,6 +933,7 @@ if __name__ == "__main__":
     cases2 = ['2nthrt', 'expax', 'quadp', 'quadm', 'quad2p', 'quad2m']
     for case in cases2:
         try:
+            print(case)
             optimize2('../../Binary/IR/herbie/sintan/'+case+'.ir')
         except:
             pass
@@ -975,7 +978,7 @@ if __name__ == "__main__":
     # optimize_for_multi_input('../case/iRRAM/midarc/midarc_real.pth', '../case/iRRAM/midarc/midarc_points.txt')
     # optimize_for_multi_input('../case/herbie/midarc/midarc_real.pth', '../case/herbie/midarc/midarc_points.txt')
     # iRRMA case
-    '''
+   
     optimize('../../Binary/IR/iRRAM/analytic/analytic.ir')
     optimize('../../Binary/IR/iRRAM/e_example/e_example.ir')
     optimize('../../Binary/IR/iRRAM/float_extension/float_extension.ir')
