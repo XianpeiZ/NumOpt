@@ -571,7 +571,10 @@ if __name__ == "__main__":
     #case = 'itsys'
     #case = 'analytic'
     for case in cases:
-        prepare(case)
-        run(case, mode='rd')
-        analysis(case, mode='rd')
+        try:
+            prepare(case)
+            run(case, mode='rd')
+            analysis(case, mode='rd')
+        except:
+            pass
 
