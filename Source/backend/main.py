@@ -960,7 +960,7 @@ if __name__ == "__main__":
     optimize('../../Binary/IR/herbie/2atan/2atan.ir')
     optimize2('../../Binary/IR/herbie/2nthrt/2nthrt.ir')
     
-    optimize2('../../Binary/IR/herbie/expax/expax.ir')
+
 
     # NumeratorFrom2
     optimize2('../../Binary/IR/herbie/quadp/quadp.ir')
@@ -978,13 +978,14 @@ if __name__ == "__main__":
     # optimize_for_multi_input('../case/iRRAM/midarc/midarc_real.pth', '../case/iRRAM/midarc/midarc_points.txt')
     # optimize_for_multi_input('../case/herbie/midarc/midarc_real.pth', '../case/herbie/midarc/midarc_points.txt')
     # iRRMA case
-   
     optimize('../../Binary/IR/iRRAM/analytic/analytic.ir')
     optimize('../../Binary/IR/iRRAM/e_example/e_example.ir')
     optimize('../../Binary/IR/iRRAM/float_extension/float_extension.ir')
     optimize('../../Binary/IR/iRRAM/gamma/gamma.ir')
     optimize('../../Binary/IR/iRRAM/harmonic/harmonic.ir')
     optimize('../../Binary/IR/iRRAM/jmmuller/jmmuller.ir')
+
+    optimize2('../../Binary/IR/herbie/expax/expax.ir')
 
 
 
