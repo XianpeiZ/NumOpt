@@ -27,13 +27,13 @@ install iRRAM
     sudo apt install m4
     sudo apt-get install autoconf automake libtool
 
-download the [iRRAM library](http://irram.uni-trier.de/irram-files/iRRAM_2013_01.tar.bz2) and [gmp-5.1.3](ftp://ftp.gmplib.org/pub/gmp/gmp-5.1.3.tar.bz2) and [mpfr-3.1.2](https://www.mpfr.org/mpfr-3.1.2/mpfr-3.1.2.tar.bz2).
+download [gmp-6.0.0](ftp://ftp.gmplib.org/pub/gmp/gmp-6.0.0.tar.bz2) and [mpfr-3.1.2](https://www.mpfr.org/mpfr-3.1.2/mpfr-3.1.2.tar.bz2).
 
 
-first, install gmp-5.1.3
+first, install gmp-6.0.0
 
-    tar -zxvf gmp-5.1.3.tar.bz2
-    cd gmp-5.1.3
+    tar -zxvf gmp-6.0.0.tar.bz2
+    cd gmp-6.0.0
     ./configure
     make
     sudo make install
@@ -48,13 +48,21 @@ first, install gmp-5.1.3
 
 最后安装iRRAM
 
-    进入解压后得到的iRRAM文件夹
+    git clone https://github.com/norbert-mueller/iRRAM.git
+    进入iRRAM文件夹
     sudo ./QUICKINSTALL_run_me
-    按照提示，选择1选项， use versions of GMP and MPFR already installed on your system, 即可完成安装
-
-最后检查代码的Scipt/makefile中irram路径，Source/backend/config.py中irram_home路径，herbie_report.py和irram_report.py中save_makefile函数中irram路径是否与安装位置一致。
-默认的irram安装位置是iRRAM/installed, 王怀瑾虚拟机和代码的irram路径都是iRRAM
+    按照提示，三个步骤:
     
+        第一个问你用系统装好的gmp和mpfr还是再下载或者用本地的安装包，选择1选项用安装好的gmp和mpfr.
+        之后会问你安装在本地还是系统目录下，选择安装到本地
+        然后问安装到哪个目录，默认安装到当前iRRAM目录下的installed文件夹内，输入目录或者直接回车使用默认地址。
+
+最后检查代码的Scipt/makefile和Source/backend/config.py中iRRAM_HOME变量是否与你的iRRAM安装位置一致。
+需要检查和改动的位置：
+
+    Script/Makefile中第四行的iRRAM_HOME
+    Source/backend/config.py中第六行的iRRAM_HOME
+
 
 run
 ---
