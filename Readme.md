@@ -1,5 +1,5 @@
 environment config
-------------------
+==================
 Our program run on ubuntu16.04 with python3.6, you can install python3.6 and pip3 on ubuntu16.04 with:
 
     sudo add-apt-repository ppa:jonathonf/python-3.6
@@ -11,7 +11,6 @@ Our program run on ubuntu16.04 with python3.6, you can install python3.6 and pip
 
 install antlr4 and python packege antlr4-python3-runtime :
 
-    sudo apt install antlr4
     sudo pip3 install antlr4-python3-runtime==4.7.1
     sudo pip3 install sympy==1.1.1
 
@@ -22,6 +21,7 @@ install clang
 
 
 install iRRAM
+-------------
 安装iRRAM之前，先运行以下命令
 
     sudo apt install m4
@@ -65,13 +65,13 @@ first, install gmp-6.0.0
 
 
 run
----
+===
 run command in ./Script/:
 
     sh bench_eval.sh
 
 results
--------
+=======
 you can get some result files of each case in ./Result/casename, in which there is a file named error.rd that record the errors of the case with optimization and without. 
 
 The optimization generate a new code for the cases, which are in Banary/OptimizedCode/.
